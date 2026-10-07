@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 82, "column": 0}, "map": {"version":3,"sources":["file:///Users/bemo/Code/CPE320_AiAgent/WorkSpace/src/app/api/status/route.ts"],"sourcesContent":["import { NextResponse } from 'next/server';\nimport fs from 'fs';\nimport path from 'path';\n\nexport async function GET() {\n  const statusPath = path.join(process.cwd(), 'agent_status.json');\n  const data = fs.readFileSync(statusPath, 'utf-8');\n  return NextResponse.json(JSON.parse(data), {\n    headers: { 'Cache-Control': 'no-store' },\n  });\n}"],"names":["GET","statusPath","join","process","cwd","data","readFileSync","json","JSON","parse","headers"],"mappings":";;;;AAAA;AACA;AACA;;;;AAEO,eAAeA;IACpB,MAAMC,aAAa,4GAAI,CAACC,IAAI,CAACC,QAAQC,GAAG,IAAI;IAC5C,MAAMC,OAAO,wGAAE,CAACC,YAAY,CAACL,YAAY;IACzC,OAAO,gJAAY,CAACM,IAAI,CAACC,KAAKC,KAAK,CAACJ,OAAO;QACzCK,SAAS;YAAE,iBAAiB;QAAW;IACzC;AACF"}}]
+}

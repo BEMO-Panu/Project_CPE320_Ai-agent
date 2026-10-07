@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+body {
+  min-height: 100vh;
+  color: #3f2a1d;
+  background:
+    radial-gradient(900px 480px at 12% 18%, rgba(255, 176, 92, 0.45), transparent 58%),
+    radial-gradient(700px 420px at 88% 30%, rgba(244, 140, 120, 0.38), transparent 52%),
+    radial-gradient(600px 380px at 70% 90%, rgba(196, 140, 90, 0.28), transparent 50%),
+    linear-gradient(165deg, #fff6ea 0%, #f3e0c8 42%, #e8c9a8 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  z-index: 0;
+}
